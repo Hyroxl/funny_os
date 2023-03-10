@@ -12,5 +12,3 @@ fn panic(_info: &PanicInfo) -> ! {
 pub extern "C" fn _start() -> ! {
     loop {}
 }
-
-
