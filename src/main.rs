@@ -7,16 +7,19 @@
 use core::panic::PanicInfo;
 use blog_os::println;
 
-#[no_mangle]
+#[no_mangle] // don't mangle the name of this function
 pub extern "C" fn _start() -> ! {
     println!("Hello World{}", "!");
 
+    blog_os::init();
+
+    // as before
     #[cfg(test)]
     test_main();
 
+    println!("It did not crash!");
     loop {}
 }
-
 /// This function is called on panic.
 #[cfg(not(test))]
 #[panic_handler]
