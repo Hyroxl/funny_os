@@ -31,7 +31,6 @@ pub extern "C" fn _start() -> ! {
 fn panic(info: &PanicInfo) -> ! {
     println!("{}", info);
     blog_os::hlt_loop();
-    loop {}
 }
 
 #[cfg(test)]
