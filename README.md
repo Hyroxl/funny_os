@@ -1,3 +1,5 @@
 # funny_os
 
-a small os written in rust that says hello world
+a small os written in rust 
+
+ follows the blog "Writing an os in rust"
